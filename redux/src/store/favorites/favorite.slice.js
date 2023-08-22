@@ -2,13 +2,13 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = [];
 
-export const favotiteSlice = createSlice({
+export const favotitesSlice = createSlice({
   name: "favorites",
   initialState,
   reducers: {
     toggleFavorites: (state, action) => {
-      const recipe = action.payload;
-      const ifExist = state.some((rec) => rec.id === recipe.id);
+      const recipe = action.payload
+      const ifExist = state.some((rec) => rec.id === recipe.id)
       if (ifExist) {
         const index = state.findIndex(item => item.id === recipe.id)
         if (index !== -1) {
@@ -18,8 +18,8 @@ export const favotiteSlice = createSlice({
       else {
         state.push(recipe);
       }
-    },
-  },
-});
+    }
+  }
+})
 
-export const { actions, reducer } = favotiteSlice
+export const { actions, reducer } = favotitesSlice

@@ -1,0 +1,23 @@
+.header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 5px 10px;
+    margin-bottom: 20px;
+}
+
+.header span {
+    font-size: 18px;
+    background-color: #28d8db;
+    border-radius: 5px;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 1px;
+}
+
+.header div svg {
+    width: 2em;
+    height: 2em;
+}
