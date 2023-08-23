@@ -5,7 +5,7 @@ import { useFavorites } from '../../hooks/useFavorites'
 
 
 const RecipeItem = ({ recipe }) => {
-
+    
     const { favorites } = useFavorites()
 
     const { toggleFavorites } = useActions()
@@ -17,7 +17,7 @@ const RecipeItem = ({ recipe }) => {
         <div className={styles.item}>
             {}
             <h3>{recipe.name}</h3>
-            <button onClick={() => toggleFavorites(recipe)}>{ifExists ? 'Remove from favorites' : 'Add to favorites'}</button>
+            <button onClick={() => toggleFavorites(recipe)}>{ifExists ? 'Delete from favorites' : 'Add to favorites'}</button>
         </div>
     )
 }

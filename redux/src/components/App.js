@@ -1,25 +1,16 @@
+import Favorites from './favorites/Favorites';
 import Header from './header/Header';
-import RecipeItem from './recipe-item/RecipeItem';
+import Recipes from './recipe-item/Recipes';
+import { Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
     <section>
       <Header />
-      <div className="App">
-        <RecipeItem recipe={{
-          id: 1,
-          name: 'Lasagna',
-        }} />
-        <RecipeItem recipe={{
-          id: 2,
-          name: 'Meat bowl',
-        }} />
-        <RecipeItem recipe={{
-          id: 3,
-          name: 'Stake in sauce',
-        }} />
-      {}
-      </div>
+      <Routes>
+        <Route path="/" element={<Recipes />} />
+        <Route path="/favorites" element={<Favorites />} />
+      </Routes>
     </section>
   );
 }
